@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Vehicle = /** @class */ (function () {
+    // private라면, 캡슐화를 위해 하위클래스에서 접근할 수 없어 오류 발생
     function Vehicle(wheelCount) {
         this.wheelCount = wheelCount;
     }
@@ -40,8 +41,10 @@ var Automobile = /** @class */ (function (_super) {
     }
     return Automobile;
 }(Vehicle));
+// 하위클래스 인스턴스 생성
 var motorCycle = new Motorcycle();
 motorCycle.updateWheelCount(22);
 motorCycle.showNumberOfWheels();
+// 하위클래스 인스턴스 생성
 var automobile = new Automobile();
 automobile.showNumberOfWheels();

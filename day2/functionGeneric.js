@@ -1,9 +1,12 @@
 function getLength(arg) {
-    // if((arg as any).hasOwnProperty("length")) {
-    //   return arg["length"]
-    // }
-    // return 0;
-    return arg.length;
+    if (arg.hasOwnProperty("length")) {
+        return arg["length"];
+    }
+    return 0;
 }
 // console.log(getLength(22));
 console.log(getLength("Hello World."));
+function getLength2(arg) {
+    return arg.length;
+}
+console.log(getLength2("Hello World."));
