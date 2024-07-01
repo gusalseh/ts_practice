@@ -3,7 +3,7 @@ async function delayedResult() {
     setTimeout(() => {
       resolve("I completed successfully");
       // reject("I failed");
-    }, 1000)
+    }, 1000);
   });
 }
 
@@ -11,3 +11,7 @@ async function delayedResult() {
   const result = await delayedResult();
   console.log(result);
 })();
+
+async function asyync() {
+  return new Promise((result, error) => {});
+}
