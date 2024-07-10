@@ -13,6 +13,7 @@ const Greeting: FC<GreetingProps> =(
   // useEffect: name 변수가 바뀔 때 마다,
   // if 내부의 값으로 바뀜
   // setter 개념과 유사
+  // 화면이 렌더링된 다음, 실행됨
   useEffect(() => {
     if (name) {
       setMessage(`Hello from, ${name}`);
