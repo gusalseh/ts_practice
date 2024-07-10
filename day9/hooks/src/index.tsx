@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import UseStateApp1 from './UseStateApp1';
 import UseStateApp2 from './UseStateApp2';
 import UseEffectApp1 from './UseEffectApp1';
+import UseEffectApp2 from './UseEffectApp2';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,5 +14,6 @@ const root = ReactDOM.createRoot(
 root.render(
   // <UseStateApp1/>
   // <UseStateApp2/>
-  <UseEffectApp1/>
+  // <UseEffectApp1/>
+  <UseEffectApp2/>
 );

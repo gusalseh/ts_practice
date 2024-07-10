@@ -20,7 +20,13 @@ function UseEffectApp1() {
     console.log("이름 렌더링");
   }, [name])
 
+  // // 무조건 렌더링
+  // useEffect(() => {
+  //   console.log("무조건 렌더링");
+  // })
+
   // []안에 변동사항이 없으므로, useEffect 변화 x
+  // 최초 1번만 실행
   // useEffect(() => {
   //   console.log("렌더링");
   // }, []);
