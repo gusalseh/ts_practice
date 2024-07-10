@@ -8,22 +8,22 @@ function UseEffectApp1() {
     setCount(count + 1);
   }
 
-  useEffect(() => {
-    console.log("렌더링");
-  }, [count]);
-
-  // []안에 변동사항이 없으므로, useEffect 변화 x
-  // useEffect(() => {
-  //   console.log("렌더링");
-  // }, []);
-
   const handleInputUpdate = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setName(e.target.value)
   }
 
   useEffect(() => {
+    console.log("렌더링");
+  }, [count]);
+  
+  useEffect(() => {
     console.log("이름 렌더링");
   }, [name])
+
+  // []안에 변동사항이 없으므로, useEffect 변화 x
+  // useEffect(() => {
+  //   console.log("렌더링");
+  // }, []);
 
   return (
     <div>
