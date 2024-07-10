@@ -29,7 +29,7 @@ function UseStateApp1() {
 
   return (
     <div>
-      <span>현재시각: {time} 시 {minute}분</span>
+      <span>현재시각: {time} 시 {minute} 분</span>
       <br />
       <button onClick={handleClick}>Update</button>
       <button onClick={handleMinuteClick}>Minute Update</button>
