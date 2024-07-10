@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+}

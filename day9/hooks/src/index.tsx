@@ -8,6 +8,7 @@ import UseStateApp2 from './UseStateApp2';
 import UseEffectApp1 from './UseEffectApp1';
 import UseEffectApp2 from './UseEffectApp2';
 import UseSampleApp1 from './UseSampleApp1';
+import UseContextApp1 from './UseContextApp1';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,5 +18,6 @@ root.render(
   // <UseStateApp2/>
   // <UseEffectApp1/>
   // <UseEffectApp2/>
-  <UseSampleApp1/>
+  // <UseSampleApp1/>
+  <UseContextApp1/>
 );
