@@ -28,7 +28,22 @@ export default function CreateOrUseTest() {
 
   const head = useMemo(() => headTexts.map((text) => <th key={text}>{text}</th>), [])
 
-  const body = useOrCreate("children", () =>
+  // const body = useOrCreate("children", () =>
+  //   users.map((user, index) => (
+  //     <tr key={user.uuid}>
+  //       <th>{index + 1}</th>
+  //       <td className="flex items-center">
+  //         <Avatar src={user.avatar} size="1.5rem" />
+  //         <p className="ml-2">{user.name}</p>
+  //       </td>
+  //       <td>{user.jobTitle}</td>
+  //       <td>{user.email}</td>
+  //     </tr>
+  //   ))
+  // );
+
+  const body = useMemo(
+    () =>
     users.map((user, index) => (
       <tr key={user.uuid}>
         <th>{index + 1}</th>
@@ -39,7 +54,8 @@ export default function CreateOrUseTest() {
         <td>{user.jobTitle}</td>
         <td>{user.email}</td>
       </tr>
-    ))
+    )),
+    [users]
   );
 
   return (
