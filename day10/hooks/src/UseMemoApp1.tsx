@@ -1,5 +1,17 @@
 import React, { useMemo, useState } from "react";
 
+function hardCalculate(hardNumber: number): any {
+  console.log("어려운 계산!");
+  for (let i=0; i<99999999; i++) {}
+  return hardNumber + 10000;
+}
+
+function easyCalculate(hardNumber: number): any {
+  console.log("쉬운 계산!");
+  for (let i=0; i<9; i++) {}
+  return hardNumber + 1;
+}
+
 function UseMemoApp1() {
   const [hardNumber, setHardNumber] = useState(1);
   const [easyNumber, setEasyNumber] = useState(1);
@@ -26,15 +38,3 @@ function UseMemoApp1() {
 };
 
 export default UseMemoApp1;
-
-function hardCalculate(hardNumber: number): any {
-  console.log("어려운 계산!");
-  for (let i=0; i<99999999; i++) {}
-  return hardNumber + 10000;
-}
-
-function easyCalculate(hardNumber: number): any {
-  console.log("쉬운 계산!");
-  for (let i=0; i<9; i++) {}
-  return hardNumber + 1;
-}
