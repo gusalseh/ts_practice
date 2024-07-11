@@ -5,7 +5,7 @@ function getNumbers() {
 }
 
 function UseLayoutEffectApp2() {
-  const [numbers, setNumbers] = useState([]);
+  const [numbers, setNumbers] = useState([1,2,3]);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function UseLayoutEffectApp2() {
   
 
   return (
-    <div ref={ref} style={{ height: "300px", border: "1px solid blue" }}>{numbers}</div>
+    <div ref={ref} style={{ height: "300px", border: "1px solid blue" }}></div>
   )
 }
 
