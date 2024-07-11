@@ -14,6 +14,9 @@ import UseRefApp2 from './UseRefApp2';
 import UseRefApp3 from './UseRefApp3';
 import UseRefApp4 from './UseRefApp4';
 import UseMemoApp1 from './UseMemoApp1';
+import UseMemoApp2 from './UseMemoApp2';
+import UseCallbackApp1 from './UseCallbackApp1';
+import UseCallbackApp2 from './UseCallbackApp2';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -29,5 +32,8 @@ root.render(
   // <UseRefApp2/>
   // <UseRefApp3/>
   // <UseRefApp4/>
-  <UseMemoApp1/>
+  // <UseMemoApp1/>
+  // <UseMemoApp2/>
+  // <UseCallbackApp1/>
+  <UseCallbackApp2/>
 );

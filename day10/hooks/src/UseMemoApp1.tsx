@@ -7,7 +7,7 @@ function hardCalculate(hardNumber: number): any {
 }
 
 function easyCalculate(hardNumber: number): any {
-  console.log("쉬운 계산!");
+  console.log("참 쉬운 계산!");
   for (let i=0; i<9; i++) {}
   return hardNumber + 1;
 }
