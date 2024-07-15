@@ -204,45 +204,45 @@
 //   return <Clock today={today} />;
 // }
 
-import UseOrCreateTest from "./pages/UseOrCreateTest";
-import Memo from "./pages/Memo";
-import Callback from "./pages/Callback";
-import HighOrderCallback from "./pages/HighOrderCallback";
-
-export default function App() {
-  return (
-    <div>
-      <HighOrderCallback />
-      <Callback />
-      <UseOrCreateTest />
-      <Memo />
-    </div>
-  );
-}
-
-// import NumberState from "./pages/NumberState";
-// import InputTest from "./pages/InputTest";
-// import ShowHideModal from "./pages/ShowHideModal";
-// import RadioInputTest from "./pages/RadioInputTest";
-// import HigherOrderRadioInputTest from "./pages/HigherOrderRadioInputTest";
-// import BasicForm from "./pages/BasicForm";
-// import ObjectState from "./pages/ObjectState";
-// import ArrayState from "./pages/ArrayState";
+// import UseOrCreateTest from "./pages/UseOrCreateTest";
+// import Memo from "./pages/Memo";
+// import Callback from "./pages/Callback";
+// import HighOrderCallback from "./pages/HighOrderCallback";
 
 // export default function App() {
 //   return (
 //     <div>
-//       <ArrayState />
-//       <ObjectState />
-//       <BasicForm />
-//       <HigherOrderRadioInputTest />
-//       <RadioInputTest />
-//       <ShowHideModal />
-//       <InputTest />
-//       <NumberState />
+//       <HighOrderCallback />
+//       <Callback />
+//       <UseOrCreateTest />
+//       <Memo />
 //     </div>
 //   );
 // }
+
+import NumberState from "./pages/NumberState";
+import InputTest from "./pages/InputTest";
+import ShowHideModal from "./pages/ShowHideModal";
+import RadioInputTest from "./pages/RadioInputTest";
+import HigherOrderRadioInputTest from "./pages/HigherOrderRadioInputTest";
+import BasicForm from "./pages/BasicForm";
+import ObjectState from "./pages/ObjectState";
+import ArrayState from "./pages/ArrayState";
+
+export default function App() {
+  return (
+    <div>
+      <ArrayState />
+      <ObjectState />
+      <BasicForm />
+      <HigherOrderRadioInputTest />
+      <RadioInputTest />
+      <ShowHideModal />
+      <InputTest />
+      <NumberState />
+    </div>
+  );
+}
 
 // import ClassLifecycle from "./pages/ClassLifecycle";
 // import WindowResizeTet from "./pages/WindowResizeTest";

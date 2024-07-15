@@ -4,6 +4,16 @@ import { Icon } from "../theme/daisyui";
 import * as D from "../data";
 
 export default function ArrayState() {
+  const [images, setImages] = useState<string[]>([]);
+
+  const addImage = useCallback(() => setImages(images => [D.randomImage(200, 100, 50), ... images]), []);
+
+  const clearImages = useCallback(() => setImages(notUsed => []), []);
+
+  const children = useMemo(() => images.map((image, index) => (
+    <Div key={index} src={image} className="w-1/5 m-2" height="5rem" minHeight="5rem"/>
+  )), [images]);
+
   return (
     <section className="mt-4">
       <Title>ArrayState</Title>
@@ -12,17 +22,17 @@ export default function ArrayState() {
         <div data-tip="add image" className="">
           <Icon
             name="add"
-            onClick={() => {}}
+            onClick={addImage}
             className="mr-12 btn-primary"
             iconClassName="text-3xl"
           />
         </div>
         {/* <div data-tip="add image" className="tooltip"> */}
         <div data-tip="clear all" className="">
-          <Icon name="clear_all" onClick={() => {}} iconClassName="text-3xl" />
+          <Icon name="clear_all" onClick={clearImages} iconClassName="text-3xl" />
         </div>
       </div>
-      <div className="flex flex-wrap mt-4">{}</div>
+      <div className="flex flex-wrap mt-4">{children}</div>
     </section>
   );
 }
