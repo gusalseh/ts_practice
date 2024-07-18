@@ -1,22 +1,22 @@
-let express = require("express");
-let { createHandler } = require("graphql-http/lib/use/express");
-let { buildSchema } = require("graphql");
+var express = require("express");
+var { createHandler } = require("graphql-http/lib/use/express");
+var { buildSchema } = require("graphql");
 
 // Construct a schema, using GraphQL schema language
-let schema = buildSchema(`
+var schema = buildSchema(`
   type Query {
     hello: String
   }
 `);
 
 // The root provides a resolver function for each API endpoint
-let root = {
+var root = {
   hello() {
     return "Hello world!";
   },
 };
 
-let app = express();
+var app = express();
 
 // Create and use the GraphQL handler.
 app.all(
