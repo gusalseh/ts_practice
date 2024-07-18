@@ -80,3 +80,23 @@ app.get("/", (_req, res) => {
   res.type("html");
   res.end(ruruHTML({ endpoint: "/graphql" }));
 });
+
+// ruru에서 mutation을 하고 싶을 경우
+// mutation {
+//   createMessage(input: {
+//     content: "hello message",
+//     author: "spencer"
+//   }) {
+//     id
+//     content
+//     author
+//   }
+// }
+
+// ruru에서 query를 하고 싶을 경우
+// query {
+//   getMessage(id: "c29e651c0bd5baa8fad1") {
+//     content
+//     author
+//   }
+// }
