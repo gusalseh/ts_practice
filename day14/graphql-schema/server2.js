@@ -5,20 +5,26 @@ var { buildSchema } = require("graphql");
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
   type Query {
-    hello: String
+    quoteOfTheDay: String
+    random: Float!
+    rollThreeDice: [Int]
   }
 `);
 
 // The root provides a resolver function for each API endpoint
 var root = {
-  hello() {
-    return "Hello world!";
+  quoteOfTheDay() {
+    return Math.random() < 0.5 ? "Take it easy" : "Salvation lies within";
+  },
+  random() {
+    return Math.random();
+  },
+  rollThreeDice() {
+    return [1, 2, 3].map((_) => 1 + Math.floor(Math.random() * 6));
   },
 };
 
 var app = express();
-
-// Create and use the GraphQL handler.
 app.all(
   "/graphql",
   createHandler({
@@ -26,10 +32,8 @@ app.all(
     rootValue: root,
   })
 );
-
-// Start the server at port
 app.listen(4000);
-console.log("Running a GraphQL API server at http://localhost:4000/graphql");
+console.log("Running a GraphQL API server at localhost:4000/graphql");
 
 let { ruruHTML } = require("ruru/server");
 
