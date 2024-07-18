@@ -1,0 +1,4 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+/graphql-schema/node_modules
+/graphql-shema/node_modules
