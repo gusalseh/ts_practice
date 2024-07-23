@@ -31,6 +31,19 @@ app.delete("/posts/:id", (req, res) => {
   res.json("NOT Changed");
 });
 
+app.delete("/posts", (req, res) => {
+  const id = req.query.id;
+  const filteredPosts = posts.filter((post) => post.id !== +id);
+  const isLengthChanged = posts.length !== filteredPosts.length;
+  posts = filteredPosts;
+  if (isLengthChanged) {
+    res.json("OK");
+    return;
+  }
+
+  res.json("NOT Changed");
+});
+
 app.listen("3000", () => {
   console.log("welcome posts START");
 });
