@@ -8,16 +8,21 @@ app.listen(port, () => {
   console.log("익스프레스로 라우터 리팩토링하기");
 });
 
+const user = (req, res) => {
+  const user = url.parse(req.url, true).query;
+  res.json(`[user] name: ${user.name}, age: ${user.age}`);
+};
+
 app.get("/", (_, res) => {
   res.end("HOME");
 });
 app.get("/user", user);
 app.get("/feed", feed);
 
-function user(req, res) {
-  const user = url.parse(req.url, true).query;
-  res.json(`[user] name: ${user.name}, age: ${user.age}`);
-}
+// function user(req, res) {
+//   const user = url.parse(req.url, true).query;
+//   res.json(`[user] name: ${user.name}, age: ${user.age}`);
+// }
 
 function feed(_, res) {
   res.json(`<ul>
