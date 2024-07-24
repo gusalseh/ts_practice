@@ -1,7 +1,7 @@
 const a = false;
 
 if (a) {
-  require("./modules/func");
+  require("../modules/func");
 }
 
 console.log("성공");
