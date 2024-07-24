@@ -34,6 +34,7 @@ console.log(
   "path.relative():",
   path.relative("C:\\dev\\projects\\ts_practice\\day16\\path.js", "C:\\")
 );
+// join은 /를 상대경로로 처리
 console.log(
   "path.join():",
   path.join(
@@ -49,6 +50,7 @@ console.log(
     "day16"
   )
 );
+// resolve는 /를 절대경로로 처리
 console.log(
   "path.resolve():",
   path.resolve(
