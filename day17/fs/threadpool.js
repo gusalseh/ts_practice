@@ -37,3 +37,24 @@ crypto.pbkdf2(pass, salt, 1000000, 128, "sha512", () => {
 crypto.pbkdf2(pass, salt, 1000000, 128, "sha512", () => {
   console.log("8: ", Date.now() - start);
 });
+
+crypto.pbkdf2(pass, salt, 1000000, 128, "sha512", () => {
+  console.log("9: ", Date.now() - start);
+});
+
+crypto.pbkdf2(pass, salt, 1000000, 128, "sha512", () => {
+  console.log("10: ", Date.now() - start);
+});
+
+crypto.pbkdf2(pass, salt, 1000000, 128, "sha512", () => {
+  console.log("11: ", Date.now() - start);
+});
+
+crypto.pbkdf2(pass, salt, 1000000, 128, "sha512", () => {
+  console.log("12: ", Date.now() - start);
+});
+
+// 스레드풀을 직접 컨트롤할 수는 없지만
+// 개수 조절은 가능
+// 윈도우 -> 터미널에 SET UV_THREADPOOL_SIZE=개수
+// 맥, 리눅스 -> 터미널에 UV_THREADPOOL_SIZE=개수
