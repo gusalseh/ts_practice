@@ -9,9 +9,10 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <GoogleOAuthProvider
-    clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID as string}
-  >
+  // <GoogleOAuthProvider
+  //   clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID as string}
+  // >
+  <React.Fragment>
     <App />
-  </GoogleOAuthProvider>
+  </React.Fragment>
 );
