@@ -1,20 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import LoginPage from "./components/LoginPage";
+import ProfilePage from "./components/ProfilePage";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </div>
+    <GoogleOAuthProvider clientId="maroonever">
+      <Router>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+        </Routes>
+      </Router>
+    </GoogleOAuthProvider>
   );
-}
+};
 
 export default App;
