@@ -32,6 +32,7 @@ function registerByPromise(user) {
     .then(sendEmail)
     .then(getResult)
     .catch((error) => new Error(error))
+    .finally(() => console.log("완료"))
   console.log(result)
   return result
 }
