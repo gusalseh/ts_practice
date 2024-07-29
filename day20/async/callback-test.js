@@ -24,10 +24,10 @@ function getResult(user) {
   return `success register ${user.name}`
 }
 
-const obj = {
+const myUser = {
   email: "andy@test.com",
   password: "1234",
   name: "andy"
 }
-const result = register(obj)
+const result = register(myUser)
 console.log(result)
