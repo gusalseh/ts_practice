@@ -48,6 +48,7 @@ const myUser = {
 allResult = Promise.all([
   saveDB(myUser),
   sendEmail(myUser),
-  getResult(myUser)
+  getResult(myUser),
+  registerByPromise(myUser)
 ]);
 allResult.then(console.log)
